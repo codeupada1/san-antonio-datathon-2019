@@ -3,7 +3,7 @@
 """
 This script contains code used by the following jupytr notebooks:
 
-1. sewer-dd.ipynb
+1. dd-wrangling.ipynb
 2.
 3.
 
@@ -32,8 +32,8 @@ from env import path
 
 def read_data(filename):
 	"""
-	Reads in a subset of the dataset: Chicago Women's
-	Health Risk Study, 1995-1998 (ICPSR 3002)
+	Reads in the dataset: Sanitary Sewer Overflow (SSO)
+    from the San Antonio Water System (SAWS)
 
 	"""
 	return pd.read_csv(path + filename, low_memory=False)
@@ -66,7 +66,7 @@ if __name__ == '__main__':
 
 
 
-__authors__ = ["Ednalyn C. De Dios, et al.", "Jesse J. Ruiz"]
+__authors__ = ["Joseph Burton", "Ednalyn C. De Dios", "Jason Dunn", "Sandy Graham", "Jesse J. Ruiz"]
 __copyright__ = "Copyright 2019, Codeup Data Science"
 __credits__ = ["Maggie Guist", "Zach Gulde"]
 __license__ = "MIT"
