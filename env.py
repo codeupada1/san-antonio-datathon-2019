@@ -1,1 +1,0 @@
-path='~/desktop/Datathon/data/'
