@@ -1,20 +1,25 @@
-_Sewer Overflow Project._
+_CivTechSA Datathon 2019 Project._
 
 --
 
 # Problem Statement
 > ...
 
+
 # Objective
-> Gain insights into the sanitary sewage overflow (SSO) using
-  available data from the SAWS_SSOs_2009-2018Mar_UploadData.xlsx
+> Gain insights into the datasets related to Environmental Quality
 
 
 
 
 ## Website
 
-[Link to the slides here.](http://docs.google.com/)
+[Link to the website here.](http://datathon.datasciencenerd.us)
+
+
+## Google Slide
+
+[Link to slides here.](https://docs.google.com/presentation/d/1TNmEcrac3mnEH_U9wjEDUnLDZrthcUUPnNfm1gS_SWY/edit?usp=sharing)
 
 
 ## Usage
@@ -33,7 +38,8 @@ Codeup Ada One – [@codeupada1](https://github.com/codeupada1)
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
 - [https://github.com/ecdedios](https://github.com/ecdedios)
-- [https://github.com/jessejinnaruiz](https://github.com/jessejinnaruiz)
+- [https://github.com/orgs/codeupada1/people/josephburton06](https://github.com/orgs/codeupada1/people/josephburton06)
+- [https://github.com/orgs/codeupada1/people/SandyGavlickGraham](https://github.com/orgs/codeupada1/people/SandyGavlickGraham)
 
 ## Contributing
 
