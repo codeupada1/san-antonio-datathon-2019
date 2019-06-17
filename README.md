@@ -38,8 +38,8 @@ Codeup Ada One – [@codeupada1](https://github.com/codeupada1)
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
 - [https://github.com/ecdedios](https://github.com/ecdedios)
-- [https://github.com/orgs/codeupada1/people/josephburton06](https://github.com/orgs/codeupada1/people/josephburton06)
-- [https://github.com/orgs/codeupada1/people/SandyGavlickGraham](https://github.com/orgs/codeupada1/people/SandyGavlickGraham)
+- [https://github.com/orgs/codeupada1/people/josephburton06](https://github.com/josephburton06)
+- [https://github.com/orgs/codeupada1/people/SandyGavlickGraham](https://github.com/SandyGavlickGraham)
 
 ## Contributing
 
