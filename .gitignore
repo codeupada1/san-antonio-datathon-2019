@@ -1,3 +1,15 @@
 .ipynb_checkpoints/*
 __pycache__*
 env.py
+data/*
+meta/*
+*.twbx
+*.csv
+*.xlsx
+*.cpg
+*.dbf
+*.prj
+*.shp
+*.shx
+*.pdf
+TableauSlides.twbx
