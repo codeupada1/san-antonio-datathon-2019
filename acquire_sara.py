@@ -3,7 +3,7 @@
 """
 This script contains code used by the following jupytr notebooks:
 
-1. master-sso.ipynb
+1. master-sara.ipynb
 2.
 3.
 
@@ -32,14 +32,14 @@ from env import path
 
 def read_data(filename):
 	"""
-	Reads in the dataset: Sanitary Sewer Overflow (SSO)
-    from the San Antonio Water System (SAWS)
-
+	Reads in the datasets from the San Antonio River Authority:
+    - Flood Stage Levels
+    - Rainfall Details
+    - Rainfall Summary
+    - Water Quality
 	"""
-	return pd.read_csv(path + filename, low_memory=False)
-
-
-
+	return pd.read_csv(path + filename, low_memory=False, error_bad_lines=False)
+    
 
 # ==================================================
 # MAIN
