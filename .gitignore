@@ -13,3 +13,4 @@ meta/*
 *.shx
 *.pdf
 TableauSlides.twbx
+cleaned_sso.df.csv
