@@ -289,6 +289,9 @@ def ready_df1(df):
     df['report_date'] = pd.to_datetime(df['report_date'])
     df['response_datetime'] = pd.to_datetime(df['response_datetime'])
     df['last_cleaned'] = pd.to_datetime(df['last_cleaned'])
+
+    df1.to_csv('cleaned_sso_df.csv', index=False)
+
     return df
 
 
