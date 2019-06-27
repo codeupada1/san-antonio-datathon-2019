@@ -289,6 +289,7 @@ def ready_df1(df):
     df['report_date'] = pd.to_datetime(df['report_date'])
     df['response_datetime'] = pd.to_datetime(df['response_datetime'])
     df['last_cleaned'] = pd.to_datetime(df['last_cleaned'])
+
     return df
 
 
