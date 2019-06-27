@@ -37,19 +37,11 @@ def poly_regression(pipe_name, train_size):
     train = pipe_name[:int(pipe_name.shape[0] * train_size)]
     test = pipe_name[int(pipe_name.shape[0] * train_size):]
 
-    X_train = train[['percent_flow']]
-    y_train = train[['days']]
+    X_train = train[['days']]
+    y_train = train[['percent_flow']]
 
-    X_test = test[['percent_flow']]
-    y_test = test[['days']]
-
-    print(X_train.shape)
-    print('---')
-    print(X_test.shape)
-    print('---')
-    print(y_train.shape)
-    print('---')
-    print(len(y_test))  
+    X_test = test[['days']]
+    y_test = test[['percent_flow']]
 
     poly_features = PolynomialFeatures(degree=2)
 
@@ -79,4 +71,11 @@ def poly_regression(pipe_name, train_size):
     print("RMSE of test set is {}".format(rmse_test))
     print("R2 score of test set is {}".format(r2_test))
 
-    # print(train.shape, test.shape)
+    pipe_days_pred =  pd.DataFrame(y_test_predicted, columns=['percent_flow_pred'])
+    X_test.reset_index(drop=True, inplace=True)
+    y_test.reset_index(drop=True, inplace=True)
+    clean_day = X_test.merge(y_test, left_index=True, right_index=True)
+    clean_day = clean_day.merge(pipe_days_pred, left_index=True, right_index=True)
+    # clean_day = pipe_days_pred[pipe_days_pred.percent_flow <= 20][:1]
+
+    print(clean_day)
