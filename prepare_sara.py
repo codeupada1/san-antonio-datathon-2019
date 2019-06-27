@@ -38,11 +38,11 @@ def missing_values_col(df):
     null_percentage = (null_count / df.shape[0]) * 100
     empty_count = pd.Series(((df == ' ') | (df == '')).sum())
     empty_percentage = (empty_count / df.shape[0]) * 100
-    nan_count = pd.Series(((df == 'nan') | (df == 'NaN')).sum())
+    nan_count = pd.Series((df == '-').sum())
     nan_percentage = (nan_count / df.shape[0]) * 100
     return pd.DataFrame({'num_missing': null_count, 'missing_percentage': null_percentage,
                          'num_empty': empty_count, 'empty_percentage': empty_percentage,
-                         'nan_count': nan_count, 'nan_percentage': nan_percentage})
+                         'dash_count': nan_count, 'dash_percentage': nan_percentage})
 
 
 def missing_values_row(df):
@@ -152,42 +152,17 @@ def rename_columns_all(df):
     """
     takes in selected dataframe and renames columns to intuitive non-capitalized titles
     """
-    return df.rename(index=str, columns={'inspkey':'inspection_key',
-                                         'servno':'service_number',
-                                         'reportdate':'report_date',
-                                         'spill_st_name':'spill_street_name',
-                                         'total_gal':'total_gallons',
-                                         'galsret':'gallons_returned',
-                                         'gal':'gallons_1',
-                                         'spill_start':'spill_start_1',
-                                         'spill_stop':'spill_stop_1',
-                                         'hrs':'hours_1',
-                                         'unitid':'unit_id_1',
-                                         'unitid2':'unit_id_2',
-                                         'earz_zone':'edwards_zone',
-                                         'expr1029':'expr_1029',
-                                         'pipediam':'pipe_diameter',
-                                         'pipelen':'pipe_length',
-                                         'pipetype':'pipe_type',
-                                         'instyear':'installation_year',
-                                         'dwndpth':'downstream_depth',
-                                         'upsdpth':'upstream_depth',
-                                         'rainfall_less3':'rainfall_less_3',
-                                         'spill address': 'spill_address_full',
-                                         'sewerassetexp':'sewer_asset_exp',
-                                         'prevspill_24mos':'previous_spill_24mos',
-                                         'unittype':'unit_type',
-                                         'assettype':'asset_type',
-                                         'lastclnd':'last_cleaned',
-                                         'responsetime':'response_time',
-                                         'responsedttm':'response_datetime',
-                                         'public notice':'public_notice',
-                                         'timeint':'time_int',
-                                         'hrs_2':'hours_2',
-                                         'gal_2':'gallons_2',
-                                         'hrs_3':'hours_3',
-                                         'gal_3':'gallons_3'
-                                          })
+    return df.rename(index=str, columns={'station id':'station_id',
+                                         'end date':'date',
+                                         'oxygen, dissolved (mg/l) (00300)':'oxygen',
+                                         'e. coli, colilert, idexx method, mpn/100ml (31699)':'ecoli_idexx',
+                                         'e coli,na+mug or ea+mug,24hrs, 35 degree (#/100m (31700)':'ecoli_mug',
+                                         'e coli, sediment, mpn/100g (31702)':'ecoli_sediment',
+                                         'e.coli, colilert, idexx, holding time (31704)':'ecoili_holding_time',
+                                         'days since precipitation event (days) (72053)':'days_since_precipitation',
+                                         'present weather (1=clear,2=ptcldy,3=cldy,4=rain,5=other) (89966)':'present_weather',
+                                         'water color 1=brwn 2=red 3=grn 4=blck 5=clr 6=ot (89969)':'water_color',
+                                        })
 def lowercase_and_rename(df):
     """
     This function changes the column names' case to lowercase
@@ -199,54 +174,20 @@ def ready_df1(df):
     """
     This function prepares the dataframe for EDA.
     """
-    df = remove_columns(df, columns=[ 'sso_id',
-                                      'inspection_key',
-                                      'service_number',
-                                      'comments',
-                                      'ferguson',
-                                      'expr_1029',
-                                      'downstream_depth',
-                                      'upstream_depth',
-                                      'sewer_asset_exp',
-                                      'previous_spill_24mos',
+    df = remove_columns(df, columns=[ 'ecoli_mug',
+                                      'ecoli_sediment',
                                     ])
-    df['spill_street_address'] = df['spill_address'].map(str)+ ' ' + df['spill_street_name']
-    df = df.drop(columns=['spill_address', 'spill_street_name'])
-    df['multiple_spills'] = np.where(df['spill_start_2'].isnull(), False, True)
-    df = df.drop(columns=['spill_start_2',
-                          'spill_stop_2',
-                          'hours_2',
-                          'gallons_2',
-                          'spill_start_3',
-                          'spill_stop_3',
-                          'hours_3',
-                          'gallons_3',
-                          'gallons_1',
-                          'spill_address_full'
-                          ])
-    df = df.rename(index=str, columns={ "spill_start_1": "spill_start",
-                                        "spill_stop_1": "spill_stop",
-                                        "hours_1": "hours"})
-    df = lowercase_column_values( df, 'unit_type',
-                                'asset_type',
-                                'cause',
-                                'actions',
-                                'watershed',
-                                'discharge_to',
-                                'discharge_route',
-                                'pipe_type',
-                                'root_cause',
-                                )
-    df = titlecase_column_values(df, 'spill_street_address')
+
+
     df[['council_district',
         'edwards_zone',
         'num_spills_24mos',
         'time_int'
-        ]] = df[['council_district',
-                                   'edwards_zone',
-                                   'num_spills_24mos',
-                                   'time_int'
-                                   ]].fillna(0.0).astype(int)
+        ]] = df[[ 'council_district',
+                  'edwards_zone',
+                  'num_spills_24mos',
+                  'time_int'
+                   ]].fillna(0.0).astype(int)
     df['installation_year'] = df['installation_year'].fillna(9999).astype(int)
     df[['gallons_returned',
         'hours',
