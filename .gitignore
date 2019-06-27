@@ -1,10 +1,8 @@
 .ipynb_checkpoints/*
 __pycache__*
 env.py
-data/*
 meta/*
 *.twbx
-*.csv
 *.xlsx
 *.cpg
 *.dbf

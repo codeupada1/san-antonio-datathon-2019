@@ -290,7 +290,7 @@ def ready_df1(df):
     df['response_datetime'] = pd.to_datetime(df['response_datetime'])
     df['last_cleaned'] = pd.to_datetime(df['last_cleaned'])
 
-    df.to_csv('cleaned_sso_df.csv', index=False)
+    df.to_csv('data/cleaned_sso_df.csv', index=False)
 
     return df
 
