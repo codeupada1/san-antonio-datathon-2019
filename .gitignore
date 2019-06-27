@@ -12,5 +12,5 @@ meta/*
 *.pdf
 TableauSlides.twbx
 TableauSlides.twbr
-cleaned_sso.df.csv
-SAWS Analysis.twb
+cleaned_sso_df.csv
+# SAWS Analysis.twb
