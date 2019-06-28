@@ -195,7 +195,7 @@ def lowercase_and_rename(df):
     """
     return rename_columns_all(lowercase_columns(df))
 
-def ready_df1(df):
+def ready_df(df):
     """
     This function prepares the dataframe for EDA.
     """
