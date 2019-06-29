@@ -1,11 +1,11 @@
-spill_street_address,total_gallons,latitude,longitude
-6606 Swiss Oaks,23636682,29.42133,-98.61914
-108 Chappie James Way,14333036,29.38401,-98.59896
-700 Holbrook,12826210,29.48611,-98.41708
-1800 Austin Hwy,4919388,29.51592,-98.40155
-8600 Mission Pkwy,4537445,29.34048,-98.4575
-300 Petaluma Blvd E,3658000,29.3386,-98.49724
-668 Holbrook,2213059,29.48039,-98.41038
-1135 Mission Rd,1680800,29.38514,-98.49133
-23500 Ih 10 W,1453875,29.55505,-98.58727
-1006 Holbrook,1395910,29.48847,-98.41693
+spill_street_address,total_gallons,latitude,longitude,primary_root_cause,prim_perc,sec_root_cause,sec_perc,primary_cause,prim_cause_perc,sec_cause,sec_cause_perc
+6606 Swiss Oaks,23636682,29.42133,-98.61914,,,,,,,,
+108 Chappie James Way,14333036,29.38401,-98.59896,,,,,,,,
+700 Holbrook,12826210,29.48611,-98.41708,,,,,,,,
+1800 Austin Hwy,4919388,29.51592,-98.40155,,,,,,,,
+8600 Mission Pkwy,4537445,29.34048,-98.4575,,,,,,,,
+300 Petaluma Blvd E,3658000,29.3386,-98.49724,,,,,,,,
+668 Holbrook,2213059,29.48039,-98.41038,,,,,,,,
+1135 Mission Rd,1680800,29.38514,-98.49133,,,,,,,,
+23500 Ih 10 W,1453875,29.55505,-98.58727,,,,,,,,
+1006 Holbrook,1395910,29.48847,-98.41693,,,,,,,,
