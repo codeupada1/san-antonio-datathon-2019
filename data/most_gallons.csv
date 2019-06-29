@@ -1,11 +1,11 @@
-spill_street_address,total_gallons,latitude,longitude,primary_root_cause,prim_perc,sec_root_cause,sec_perc,primary_cause,prim_cause_perc,sec_cause,sec_cause_perc
-6606 Swiss Oaks,23636682,29.42133,-98.61914,,,,,,,,
-108 Chappie James Way,14333036,29.38401,-98.59896,,,,,,,,
-700 Holbrook,12826210,29.48611,-98.41708,,,,,,,,
-1800 Austin Hwy,4919388,29.51592,-98.40155,,,,,,,,
-8600 Mission Pkwy,4537445,29.34048,-98.4575,,,,,,,,
-300 Petaluma Blvd E,3658000,29.3386,-98.49724,,,,,,,,
-668 Holbrook,2213059,29.48039,-98.41038,,,,,,,,
-1135 Mission Rd,1680800,29.38514,-98.49133,,,,,,,,
-23500 Ih 10 W,1453875,29.55505,-98.58727,,,,,,,,
-1006 Holbrook,1395910,29.48847,-98.41693,,,,,,,,
+spill_street_address,total_gallons,latitude,longitude,total_sso,primary_root_cause,prim_root_cause_count,prim_perc,sec_root_cause,sec_root_cause_count,sec_perc,primary_cause,prim_cause_count,prim_cause_perc,sec_cause,sec_cause_perc,sec_cause_perc
+6606 Swiss Oaks,23636682,29.42133,-98.61914,24,RAIN EVENT,20,83.33%,OTHER,3,12.50%,I/I,17,70.83%,STUCTURAL,4,16.67%
+108 Chappie James Way,14333036,29.38401,-98.59896,20,RAIN EVENT,20,100.00%,,,0.00%,I/I,20,100.00%,,,0.00%
+700 Holbrook,12826210,29.48611,-98.41708,16,RAIN EVENT,16,100.00%,,,0.00%,I/I,16,100.00%,,,0.00%
+1800 Austin Hwy,4919388,29.51592,-98.40155,12,RAIN EVENT,11,91.67%,DEBRIS,1,8.33%,I/I,11,91.67%,GREASE,1,8.33%
+8600 Mission Pkwy,4537445,29.34048,-98.4575,6,STRUCTURAL,3,50.00%,LIFT STATION,3,50.00%,BREAK IN MAIN,3,50.00%,BREAK IN BY-PASS LINE,1,16.67%
+300 Petaluma Blvd E,3658000,29.3386,-98.49724,2,CONTRACTOR,2,100.00%,,,0.00%,I/I,1,50.00%,DEBRIS/ROCK,1,50.00%
+668 Holbrook,2213059,29.48039,-98.41038,10,RAIN EVENT,9,90.00%,OTHER,1,10.00%,I/I,9,90.00%,OTHER,1,10.00%
+1135 Mission Rd,1680800,29.38514,-98.49133,5,RAIN EVENT,4,80.00%,STRUCTURAL,1,20.00%,I/I,4,80.00%,BREAK IN MAIN,1,20.00%
+23500 Ih 10 W,1453875,29.55505,-98.58727,12,RAIN EVENT,11,91.67%,LIFT STATION,1,8.33%,I/I,12,100.00%,,,0.00%
+1006 Holbrook,1395910,29.48847,-98.41693,4,RAIN EVENT,4,100.00%,,,0.00%,I/I,4,100.00%,,,0.00%
