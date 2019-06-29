@@ -1,6 +1,6 @@
 spill_street_address,total_gallons,latitude,longitude,total_sso,primary_root_cause,prim_root_cause_count,prim_perc,sec_root_cause,sec_root_cause_count,sec_perc,primary_cause,prim_cause_count,prim_cause_perc,sec_cause,sec_cause_perc,sec_cause_perc
 6606 Swiss Oaks,23636682,29.42133,-98.61914,24,RAIN EVENT,20,83.33%,OTHER,3,12.50%,I/I,17,70.83%,STUCTURAL,4,16.67%
-108 Chappie James Way,15518896,29.38401,-98.59896,25,RAIN EVENT,24,96.00%,STRUCTURAL,1,4.00%,I/I,24,96.00%,DEBRIS,,0.00%
+108 Chappie James Way,15518896,29.38401,-98.59896,25,RAIN EVENT,24,96.00%,STRUCTURAL,1,4.00%,I/I,24,96.00%,DEBRIS,1,4.00%
 700 Holbrook,12826210,29.48611,-98.41708,16,RAIN EVENT,16,100.00%,,,0.00%,I/I,16,100.00%,,,0.00%
 1800 Austin Hwy,4919388,29.51592,-98.40155,12,RAIN EVENT,11,91.67%,DEBRIS,1,8.33%,I/I,11,91.67%,GREASE,1,8.33%
 8600 Mission Pkwy,4537445,29.34048,-98.4575,6,STRUCTURAL,3,50.00%,LIFT STATION,3,50.00%,BREAK IN MAIN,3,50.00%,BREAK IN BY-PASS LINE,1,16.67%
